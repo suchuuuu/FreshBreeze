@@ -8,7 +8,7 @@ import SO2_photo from './assets/SO2.png';
 import PollutionImage from './assets/Airpollution.jpg';
 import Image1 from './assets/Image1.jpg';
 import Image2 from './assets/Image2.jpg';
-import Image3 from './assets/Image3.jpg';
+import Image3 from './assets/image3.jpg';
 import WeatherImage from './assets/weather.png';
 import HumidityImage from './assets/humidity.png';
 import { db, ref, onValue } from './config';
