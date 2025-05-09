@@ -15,7 +15,7 @@ import { db, ref, onValue } from './config';
 import { CartesianGrid, XAxis, YAxis, Tooltip, BarChart, Bar } from 'recharts';
 import './index.css';
 import PollutionVideo from './assets/PollutionVideo.mp4';
-import Footer from './footer';
+import Footer from './Footer';
 
 const Home = () => {
   const exploreSectionRef = useRef(null);

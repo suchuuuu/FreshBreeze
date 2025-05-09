@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 import { db, ref, onValue } from './config';
 import './Datainsight.css';
-import Footer from './footer';
+import Footer from './Footer';
 
 const DataInsight = () => {
   const [data, setData] = useState([]);
