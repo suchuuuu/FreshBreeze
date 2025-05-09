@@ -1,0 +1,91 @@
+.aboutus-container {
+    background-image: url('./assets/Aboutus.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.aboutus-title {
+    margin-left: 1.5rem;
+    font-family: 'Sen', sans-serif;
+    font-weight: 500; 
+    font-size: 65px;
+    margin-bottom: 20px;
+    color: #3A0000;
+    max-width: 90%;
+}
+
+.about-us-description {
+    margin-left: 1.5rem;
+    margin-top: 4rem;
+    font-family: 'Simreap', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #3A0000;
+    max-width: 90%;
+}
+
+@media screen and (max-width: 1024px) {
+    .aboutus-container {
+        padding: 20px;
+    }
+
+    .aboutus-title {
+        font-size: 55px;
+        margin-top: 6rem;
+        color: white;
+    }
+
+    .about-us-description {
+        font-size: 16px;
+        margin-top: 2rem;
+        color: white; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .aboutus-container {
+        padding: 20px;
+    }
+
+    .aboutus-title {
+        font-size: 50px;
+        margin-top: 8rem;
+        color: white;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .about-us-description {
+        font-size: 16px;
+        margin-top: 2rem;
+        margin-left: 0;
+        text-align: center;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .aboutus-title {
+        font-size: 40px; 
+        margin-top: 6rem;
+        color: white; 
+        text-align: center;
+    }
+
+    .about-us-description {
+        font-size: 14px;
+        margin-top: 1.5rem;
+        text-align: center;
+        color: white;
+    }
+}

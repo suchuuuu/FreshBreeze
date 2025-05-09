@@ -1,0 +1,714 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #17562A;
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1339px;
+    height: 86px;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+    padding: 0 40px;
+    margin: 3rem auto 20px;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 68px;
+    margin-right: 12rem;
+    font-size: 23px;
+    color: black;
+}
+
+.navbar-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+    color: #4CAF50;
+}
+
+.logo {
+    height: 83px;
+    width: 96.17px;
+}
+
+/* @media (max-width: 1024px) {
+    .navbar {
+        padding: 0 30px;
+    }
+    .navbar-links {
+        gap: 40px;
+        margin-right: 5rem;
+    }
+    .logo {
+        height: 60px;
+    }
+} */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .navbar-links {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .navbar-links a {
+        font-size: 20px;
+        padding: 20px;
+        background-color: #D9D9D9;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+    .navbar-links a:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+    .logo {
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-links a {
+        font-size: 10px;
+    }
+}
+
+
+/*HUMIDITY AND WEATHER */
+.weather-container {
+    margin-top: 10rem;
+    position: absolute;
+    top: 10px;
+    right: 10.5rem;
+}
+
+.weather-box {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(217, 217, 217, 0.27);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 250px;
+}
+
+.weather-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.weather-item {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.weather-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.humidity-label {
+    margin-top: -5px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* @media (max-width: 1024px) {
+    .weather-container {
+        top: 5px;
+        right: 5rem;
+    }
+
+    .weather-box {
+        width: 200px;
+    }
+
+    .weather-icon {
+        width: 35px;
+        height: 35px;
+    }
+} */
+
+@media (max-width: 768px) {
+    .weather-container {
+        right: 3rem;
+    }
+
+    .weather-box {
+        width: 180px;
+        padding: 15px;
+    }
+
+    .weather-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .weather-container {
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .weather-box {
+        width: 160px;
+        padding: 10px;
+    }
+
+    .weather-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .weather-item {
+        font-size: 14px;
+        gap: 5px;
+    }
+}
+
+/*FRESHBREEZE */
+.fresh-breeze-text {
+    font-weight: 600; 
+    font-size: 75px; 
+    color: white; 
+    text-align: center; 
+    margin-top: 11rem; 
+    margin-bottom: 1.5rem;
+}
+.description-text {
+    font-weight: 400; 
+    font-size: 25px; 
+    color: white;
+    text-align: center;
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+.cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.cta-button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-right: 10px;
+}
+.cta-button:hover {
+    background-color: #74c879; 
+}
+
+.cta-text {
+    margin-top: 4rem;
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+/*AIR POLLUTANTS */
+.rectangle {
+    margin-top: 10rem;
+    width: 90%; 
+    max-width: 1392px; 
+    height: auto;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.rectangle-text {
+    margin-top: 1rem;
+    font-size: 36px;
+    font-weight: 600; 
+    color: #3A0000;
+    text-align: left; 
+    margin-bottom: 20px;
+    transform: none; 
+    width: 100%;
+    padding-left: 20px; 
+}
+
+.rectangle-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.rectangle-box {
+    width: 100%;
+    max-width: 442px;
+    height: auto; 
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    gap: 15px;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.box-image {
+    width: 57px;
+    height: 57px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.box-text {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: black;
+}
+
+.pollutant-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+
+.real-time-value {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: black;
+    margin-left: auto;
+}
+/* @media (max-width: 1024px) {
+    .rectangle {
+        width: 90%;
+        padding: 15px;
+    }
+    .rectangle-text {
+        font-size: 28px;
+        text-align: left; 
+        padding-left: 15px; 
+    }
+    .rectangle-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .rectangle-box {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+} */
+
+@media (max-width: 768px) {
+    .rectangle {
+        width: 100%;
+        margin-top: 8rem;
+    }
+    .rectangle-text {
+        font-size: 24px;
+        padding-left: 10px; 
+    }
+    .rectangle-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .box-text {
+        font-size: 16px;
+    }
+    .pollutant-name {
+        font-size: 14px;
+    }
+    .real-time-value {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rectangle-text {
+        font-size: 20px;
+        padding-left: 10px; 
+    }
+    .rectangle-box {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 8px;
+    }
+    .box-text {
+        font-size: 14px;
+    }
+    .pollutant-name {
+        font-size: 12px;
+    }
+    .real-time-value {
+        font-size: 12px;
+    }
+}
+
+/*3rd section */
+.section-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 12rem;
+}
+  
+
+.image-section {
+    width: 800px;
+    height: 635px;
+    margin-left: 3rem;
+}
+  
+.new-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.text-section {
+    margin-right: 4rem;
+    max-width: 46%;
+    padding-left: 30px;
+}
+.text-section h2 {
+    font-weight: 600;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.text-section p {
+    margin-top: 1.25rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 23px;
+    color: white;
+    font-weight: 400;
+    margin-left: 5rem;
+}
+
+.button-container {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.monitorbutton {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.monitorbutton:hover {
+    background-color: #74c879;
+}
+
+
+@media (max-width: 1024px) {
+    .text-section {
+        max-width: 100%; 
+        margin-right: 5rem; 
+        padding-left: 20px; 
+    }
+
+    .text-section p {
+        font-size: 22px;
+    }
+
+    .monitorbutton {
+        align-items: center;
+        font-size: 16px; 
+        padding: 10px 20px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .text-section {
+        max-width: 50%; 
+        margin-right: 0; 
+        padding-left: 0; 
+        text-align: center; 
+    }
+
+    .text-section h2 {
+        font-size: 28px; 
+    }
+
+    .text-section p {
+        font-size: 18px; 
+        margin-left: 0; 
+    }
+
+    .button-container {
+        font-size: 20px; 
+        margin-top: 4rem; 
+    }
+
+    .monitorbutton {
+        font-size: 16px; 
+        padding: 10px 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .text-section {
+        max-width: 90%; 
+        padding-left: 10px; 
+        text-align: center; 
+    }
+
+    .text-section h2 {
+        font-size: 24px; 
+    }
+
+    .text-section p {
+        font-size: 16px; 
+    }
+
+    .monitorbutton {
+        font-size: 14px; 
+        padding: 8px 15px;
+    }
+}
+
+
+/*4th section */
+.benefits-container {
+    margin-top: 8rem;
+    padding: 50px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.benefits {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: white;
+    @media (max-width: 768px) {
+        font-size: 28px; 
+        margin-left: 2rem; 
+    }
+}
+
+.benefits-description {
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    @media (max-width: 768px) {
+        font-size: 20px;
+        margin-left: 2rem;
+    }
+}
+
+.benefits-images-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap; 
+    margin-top: 30px;
+}
+
+.benefit-image-box {
+    text-align: center;
+    flex: 1; 
+    max-width: 800px;  
+}
+
+.benefit-image {
+    height: 600px;
+    width: 100%;  
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.benefit-image:hover {
+    transform: scale(1.05); 
+}
+
+.image-caption {
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .benefits-container {
+        padding: 30px;
+    }   
+    .benefits-images-container {
+        gap: 20px; 
+    }
+    .benefit-image {
+        height: 300px; 
+    }
+}
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .aqi-title {
+    font-size: 33px;
+    font-weight: 600;
+    margin-left: 3rem;
+}
+
+.aqi-section {
+    margin-top: 7rem;
+    width: 100vw;
+    height: auto;
+    color: white;
+}
+
+.aqi-graph-container {
+    text-align: center;
+    margin-top: 4rem;
+    margin-left: 12rem;
+    width: 100%; 
+    max-width: 900px; 
+    height: 200px; 
+}
+
+.aqi-graph-container svg {
+    width: 100%; 
+    height: auto; 
+}
+
+@media (max-width: 1024px) {
+    .aqi-title {
+        font-size: 30px;
+        margin-left: 1rem;
+    }
+
+    .aqi-section {
+        margin-top: 4rem;
+    }
+
+    .aqi-graph-container {
+        margin-top: 3rem;
+        margin-left: 0;
+        padding: 0 2rem;
+        height: 250px;
+    }
+
+    .aqi-graph-container svg {
+        height: 300px; /* Adjust the height for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .aqi-title {
+        font-size: 28px;
+        margin-left: 1rem;
+    }
+
+    .aqi-section {
+        margin-top: 3rem;
+    }
+
+    .aqi-graph-container {
+        margin-top: 2rem;
+        margin-left: 0;
+        padding: 0 1rem;
+        max-width: 100%; 
+        height: 300px; 
+    }
+
+    .aqi-graph-container svg {
+        height: 300px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .aqi-title {
+        font-size: 24px;
+        margin-left: 1rem;
+    }
+
+    .aqi-graph-container {
+        margin-top: 1rem;
+        margin-left: 0;
+        padding: 0 0.5rem;
+        max-width: 100%;
+        height: 250px;
+    }
+
+    .aqi-graph-container svg {
+        height: 250px; 
+    }
+}
