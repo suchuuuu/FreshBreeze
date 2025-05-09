@@ -134,8 +134,7 @@
     height: 50px;
   }
 }
-
-@media (max-width: 487px) {
+@media (max-width: 350px) {
   .navbar {
     padding: 1rem;
     width: 100%;
@@ -144,7 +143,40 @@
 
   .navbar-links {
     position: static;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar-links a {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-links a:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .logo {
+    height: 45px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    padding: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar-links {
+    position: static;
+    flex-direction: row;
     gap: 10px;
     align-items: center;
     width: 100%;
