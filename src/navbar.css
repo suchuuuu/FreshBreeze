@@ -144,7 +144,7 @@
   .navbar-links {
     position: static;
     flex-direction: row;
-    gap: 10px;
+    gap: 5px;
     align-items: center;
     width: 100%;
     justify-content: center;
@@ -167,7 +167,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .navbar {
     padding: 1rem;
     width: 100%;
@@ -177,7 +177,7 @@
   .navbar-links {
     position: static;
     flex-direction: row;
-    gap: 10px;
+    gap: 5px;
     align-items: center;
     width: 100%;
     justify-content: center;
