@@ -142,7 +142,7 @@
 
   .contact-item {
     font-size: 14px;
-    flex-direction: row; /* remove column layout */
+    flex-direction: row; 
     align-items: center;
     text-align: left;
   }

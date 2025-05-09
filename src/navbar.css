@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 93%; 
+  width: 93%;
   background-color: #D9D9D9;
   border-radius: 50px;
   padding: 0.8rem 2rem;
@@ -36,10 +36,76 @@
   color: #4CAF50;
 }
 
+@media (max-width: 1364px) {
+  .navbar {
+    padding: 1rem;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-links {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    gap: 35px;
+  }
+
+  .navbar-links a {
+    font-size: 21px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-links a:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .logo {
+    height: 55px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 1rem;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-links {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .navbar-links a {
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-links a:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .logo {
+    height: 50px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
-    width: 90%; 
+    width: 90%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -69,7 +135,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 487px) {
   .navbar {
     padding: 1rem;
     width: 100%;
@@ -78,7 +144,7 @@
 
   .navbar-links {
     position: static;
-    flex-direction: row;
+    flex-direction: column;
     gap: 10px;
     align-items: center;
     width: 100%;
