@@ -1,127 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-    background-color: #17562A;
-    font-size: 25px;
-    font-family: 'Inter', sans-serif;
+  background-color: #17562A;
+  font-size: 25px;
+  overflow-x: hidden; 
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
+  font-family: Arial, sans-serif; 
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1339px;
-    height: 86px;
-    background-color: #D9D9D9;
-    border-radius: 50px;
-    padding: 0 40px;
-    margin: 3rem auto 20px;
-}
-
-.navbar-links {
-    display: flex;
-    align-items: center;
-    gap: 68px;
-    margin-right: 12rem;
-    font-size: 23px;
-    color: black;
-}
-
-.navbar-links a {
-    color: black;
-    text-decoration: none;
-}
-
-.navbar-links a:hover {
-    text-decoration: underline;
-    color: #4CAF50;
-}
-
-.logo {
-    height: 83px;
-    width: 96.17px;
-}
-
-/* @media (max-width: 1024px) {
-    .navbar {
-        padding: 0 30px;
-    }
-    .navbar-links {
-        gap: 40px;
-        margin-right: 5rem;
-    }
-    .logo {
-        height: 60px;
-    }
-} */
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-    .navbar-links {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-    .navbar-links a {
-        font-size: 20px;
-        padding: 20px;
-        background-color: #D9D9D9;
-        border-radius: 8px;
-        transition: background-color 0.3s ease;
-    }
-    .navbar-links a:hover {
-        background-color: #4CAF50;
-        color: white;
-    }
-    .logo {
-        height: 50px;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar-links a {
-        font-size: 10px;
-    }
-}
-
-
-/*HUMIDITY AND WEATHER */
+/*TEMPERATURE AND HUMIDITY */
 .weather-container {
-    margin-top: 10rem;
+    margin-top: 8rem;
     position: absolute;
-    top: 10px;
-    right: 10.5rem;
+    top: 15px;
+    right: 4rem; 
+    
 }
-
 .weather-box {
     display: flex;
     flex-direction: column;
     background-color: rgba(217, 217, 217, 0.27);
-    padding: 20px;
+    padding: 28px;
     border-radius: 15px;
     text-align: center;
-    width: 250px;
+    width: 230px;
 }
 
 .weather-icon {
     width: 40px;
     height: 40px;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .weather-item {
@@ -129,7 +47,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .weather-text-container {
@@ -137,32 +55,19 @@ li {
     flex-direction: column;
     align-items: center;
 }
-
-.humidity-label {
-    margin-top: -5px;
-    font-size: 14px;
-    color: #ffffff;
+.weather-text{
+    font-size: 26px;
 }
 
-/* @media (max-width: 1024px) {
-    .weather-container {
-        top: 5px;
-        right: 5rem;
-    }
-
-    .weather-box {
-        width: 200px;
-    }
-
-    .weather-icon {
-        width: 35px;
-        height: 35px;
-    }
-} */
-
+.humidity-label{
+    font-size: 14px;
+    margin: 0;
+    color: #c5dae0;
+}
 @media (max-width: 768px) {
-    .weather-container {
-        right: 3rem;
+    .weather-container { 
+        right: 3rem;  
+        top: 2px;
     }
 
     .weather-box {
@@ -174,12 +79,21 @@ li {
         width: 30px;
         height: 30px;
     }
+
+    .weather-item {
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .humidity-label {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 480px) {
     .weather-container {
-        top: 2rem;
-        right: 2rem;
+        right: 1rem;
+        top:0px;  
     }
 
     .weather-box {
@@ -193,12 +107,17 @@ li {
     }
 
     .weather-item {
-        font-size: 14px;
+        font-size: 12px;
         gap: 5px;
+    }
+
+    .humidity-label {
+        font-size: 10px;
     }
 }
 
-/*FRESHBREEZE */
+
+/*FRESHBREEZE TEXT*/
 .fresh-breeze-text {
     font-weight: 600; 
     font-size: 75px; 
@@ -244,6 +163,42 @@ li {
     font-weight: 400;
     font-size: 20px;
     margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .fresh-breeze-text {
+        font-size: 50px;
+    }
+
+    .description-text {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+    .cta-button {
+        font-size: 18px;
+    }   
+    .cta-text {
+        font-size: 18px;
+        margin-bottom: 0.45rem;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .fresh-breeze-text {
+        font-size: 35px;
+    }
+        .description-text {
+        font-size: 18px;
+    }
+    .cta-button {
+        font-size: 16px;
+    }
+
+    .cta-text {
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
 }
 
 /*AIR POLLUTANTS */
@@ -336,39 +291,29 @@ li {
     color: black;
     margin-left: auto;
 }
-/* @media (max-width: 1024px) {
-    .rectangle {
-        width: 90%;
-        padding: 15px;
-    }
-    .rectangle-text {
-        font-size: 28px;
-        text-align: left; 
-        padding-left: 15px; 
-    }
-    .rectangle-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-    .rectangle-box {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-} */
 
 @media (max-width: 768px) {
     .rectangle {
-        width: 100%;
+        width: 90%;
         margin-top: 8rem;
+        padding: 15px;
     }
     .rectangle-text {
         font-size: 24px;
         padding-left: 10px; 
     }
+    .rectangle-container {
+        gap: 15px;
+        display: flex;
+        justify-content: center;
+    }
     .rectangle-box {
         width: 100%;
+        max-width: 500px;
         margin-bottom: 20px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
     }
     .box-text {
         font-size: 16px;
@@ -382,14 +327,27 @@ li {
 }
 
 @media (max-width: 480px) {
+    .rectangle {
+        width: 90%;
+        margin-top: 6rem;
+        padding: 10px;
+    }
     .rectangle-text {
         font-size: 20px;
         padding-left: 10px; 
     }
+    .rectangle-container {
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+    }
     .rectangle-box {
         width: 100%;
+        max-width: 240px;
         margin-bottom: 20px;
         padding: 8px;
+        display: flex;
+        justify-content: center;
     }
     .box-text {
         font-size: 14px;
@@ -402,7 +360,10 @@ li {
     }
 }
 
-/*3rd section */
+
+
+
+/*3rd section with Video */
 .section-container {
     display: flex; 
     justify-content: space-between; 
@@ -410,7 +371,6 @@ li {
     margin-top: 12rem;
 }
   
-
 .image-section {
     width: 800px;
     height: 635px;
@@ -467,76 +427,95 @@ li {
     background-color: #74c879;
 }
 
-
-@media (max-width: 1024px) {
-    .text-section {
-        max-width: 100%; 
-        margin-right: 5rem; 
-        padding-left: 20px; 
-    }
-
-    .text-section p {
-        font-size: 22px;
-    }
-
-    .monitorbutton {
-        align-items: center;
-        font-size: 16px; 
-        padding: 10px 20px; 
-    }
-}
-
 @media (max-width: 768px) {
+    .section-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 8rem;
+    }
+
+    .image-section {
+        width: 90%;
+        height: auto;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .new-image {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+    }
+
     .text-section {
-        max-width: 50%; 
-        margin-right: 0; 
-        padding-left: 0; 
-        text-align: center; 
+        max-width: 90%;
+        padding-left: 0;
+        margin-right: 0;
+        text-align: center;
     }
 
     .text-section h2 {
-        font-size: 28px; 
+        font-size: 28px;
     }
 
     .text-section p {
-        font-size: 18px; 
-        margin-left: 0; 
+        font-size: 18px;
+        margin-left: 0;
     }
 
     .button-container {
-        font-size: 20px; 
-        margin-top: 4rem; 
+        font-size: 20px;
+        margin-top: 0rem;
     }
 
     .monitorbutton {
-        font-size: 16px; 
-        padding: 10px 20px; 
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-left: 0;
     }
 }
 
 @media (max-width: 480px) {
+    .image-section {
+        width: 100%;
+    }
+
+    .new-image {
+        width: 100%;
+        height: auto;
+        max-height: 250px;
+        object-fit: contain;
+    }
+
     .text-section {
-        max-width: 90%; 
-        padding-left: 10px; 
-        text-align: center; 
+        max-width: 100%;
+        padding-left: 0;
+        text-align: center;
     }
 
     .text-section h2 {
-        font-size: 24px; 
+        font-size: 24px;
     }
 
     .text-section p {
-        font-size: 16px; 
+        font-size: 16px;
     }
 
     .monitorbutton {
-        font-size: 14px; 
+        margin-top: 0rem;
+        font-size: 14px;
         padding: 8px 15px;
     }
 }
 
 
-/*4th section */
+
+/*BENEFIT TEXT IMAGES */
 .benefits-container {
     margin-top: 8rem;
     padding: 50px;
@@ -603,14 +582,53 @@ li {
 @media (max-width: 768px) {
     .benefits-container {
         padding: 30px;
-    }   
-    .benefits-images-container {
-        gap: 20px; 
+        overflow-x: hidden;
     }
+
+    .benefits {
+        font-size: 28px;
+        margin-left: 1rem;
+    }
+
+    .benefits-description {
+        font-size: 20px;
+        margin-left: 1rem;
+    }
+
+    .benefits-images-container {
+        display: flex;
+        flex-wrap: nowrap;  /* Prevent wrapping */
+        overflow-x: auto;  /* Enable horizontal scrolling */
+        scroll-snap-type: x mandatory;  /* Add snap-to functionality */
+        -webkit-overflow-scrolling: touch;  /* Smooth scrolling on iOS */
+        gap: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+
+    .benefits-images-container::-webkit-scrollbar {
+        display: none; /* Hide the scrollbar for cleaner look */
+    }
+
+    .benefit-image-box {
+        flex: 0 0 auto;
+        width: 80vw;  /* Adjust to make the images take up 80% of the screen width */
+        max-width: 300px;
+        scroll-snap-align: start;
+    }
+
     .benefit-image {
-        height: 300px; 
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .image-caption {
+        font-size: 18px;
+        text-align: center;
     }
 }
+
 @keyframes fadeInUp {
     0% {
       opacity: 0;
@@ -622,7 +640,7 @@ li {
     }
   }
 
-  .aqi-title {
+.aqi-title {
     font-size: 33px;
     font-weight: 600;
     margin-left: 3rem;
@@ -638,10 +656,11 @@ li {
 .aqi-graph-container {
     text-align: center;
     margin-top: 4rem;
-    margin-left: 12rem;
-    width: 100%; 
-    max-width: 900px; 
-    height: 200px; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
 }
 
 .aqi-graph-container svg {
@@ -660,6 +679,7 @@ li {
     }
 
     .aqi-graph-container {
+        overflow-x: auto; 
         margin-top: 3rem;
         margin-left: 0;
         padding: 0 2rem;
@@ -667,7 +687,7 @@ li {
     }
 
     .aqi-graph-container svg {
-        height: 300px; /* Adjust the height for tablets */
+        height: 300px;
     }
 }
 
@@ -682,6 +702,7 @@ li {
     }
 
     .aqi-graph-container {
+        overflow-x: auto; 
         margin-top: 2rem;
         margin-left: 0;
         padding: 0 1rem;

@@ -117,9 +117,12 @@ const Home = () => {
           </div>
           <div className="weather-item">
             <img src={HumidityImage} alt="Humidity" className="weather-icon" />
-            <p className="weather-text">
-              {weatherData.humidity !== null ? `${weatherData.humidity}%` : 'Loading...'}
-            </p>
+            <div className="weather-text-container">
+              <p className="weather-text">
+                {weatherData.humidity !== null ? `${weatherData.humidity}%` : 'Loading...'}
+              </p>
+              <p className="humidity-label">Humidity</p>
+            </div>
           </div>
         </div>
       </div>
@@ -159,12 +162,7 @@ const Home = () => {
         <div className="image-section">
           <video
             className="new-image"
-            src={PollutionVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
+            src={PollutionVideo} autoPlay loop muted playsInline/>
         </div>
         <div className="text-section">
           <h2>Real-Time Air Quality Monitoring</h2>

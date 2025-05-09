@@ -1,6 +1,6 @@
 .footer {
     margin-top: 13rem;
-    background-color: #D9D9D9;;
+    background-color: #D9D9D9;
     padding: 30px 10px;
     text-align: center;
     display: flex;
@@ -15,18 +15,18 @@
 }
 
 .social-links a {
-    color: #ffffff; 
+    color: #ffffff;
     text-decoration: none;
-    background-color: #17562A; 
-    border-radius: 50%; 
-    padding: 15px; 
+    background-color: #17562A;
+    border-radius: 50%;
+    padding: 15px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
 }
   
 .social-links a:hover {
-    color: #2605ff; 
+    color: #2605ff;
 }
 
 .contact-info {
@@ -53,4 +53,107 @@
     margin-top: 15px;
     width: 100px;
     height: 100px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        margin-top: 8rem;
+        padding: 20px 10px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .contact-info {
+        gap: 15px;
+    }
+
+    .contact-item {
+        font-size: 14px;
+    }
+
+    .footer-logo {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        margin-top: 5rem;
+        padding: 15px 10px;
+    }
+
+    .social-links {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .contact-item {
+        font-size: 12px;
+    }
+
+    .footer-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+.footer-logo {
+  margin-top: 15px;
+  width: 80px;   /* made smaller by default */
+  height: 80px;
+}
+
+/* Tablets: max-width 768px */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 15px;
+  }
+
+  .social-links a {
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .contact-item {
+    font-size: 15px;
+  }
+
+  .footer-logo {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Mobile: max-width 480px */
+@media (max-width: 480px) {
+  .contact-info {
+    flex-direction: row; /* stay in one line */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .contact-item {
+    font-size: 14px;
+    flex-direction: row; /* remove column layout */
+    align-items: center;
+    text-align: left;
+  }
+
+  .social-links a {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+  }
 }
