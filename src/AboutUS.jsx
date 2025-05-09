@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
-import BackgroundImage from './assets/Aboutus.jpg';
-import './AboutUS.css';
+import './aboutus.css';
 import './index.css';
 
 const AboutUS = () => {
