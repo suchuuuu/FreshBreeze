@@ -8,20 +8,23 @@ import SO2_photo from './assets/SO2.png';
 import PollutionImage from './assets/Airpollution.jpg';
 import Image1 from './assets/Image1.jpg';
 import Image2 from './assets/Image2.jpg';
-import Image3 from './assets/image3.jpg';
+import Image3 from './assets/Image3.jpg';
 import WeatherImage from './assets/weather.png';
 import HumidityImage from './assets/humidity.png';
 import { db, ref, onValue } from './config';
 import { CartesianGrid, XAxis, YAxis, Tooltip, BarChart, Bar } from 'recharts';
 import './index.css';
 import PollutionVideo from './assets/PollutionVideo.mp4';
-import Footer from './Footer';
+import Footer from './footer';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
   const exploreSectionRef = useRef(null);
   const [weatherData, setWeatherData] = useState({ temp: null, humidity: null });
   const [pollutantsData, setPollutantsData] = useState({ CO2: null, CO: null, PM25: null, SO2: null });
   const [aqiData, setAqiData] = useState({});
+  const [shownAqiToast, setShownAqiToast] = useState(false); 
 
   useEffect(() => {
     const sensorRef = ref(db, 'Sensor');
@@ -57,6 +60,32 @@ const Home = () => {
     const interval = setInterval(fetchSensorData, 900000); // 15 minutes
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    const aqiRef = ref(db, 'Sensor/aqi');
+    const unsubscribe = onValue(aqiRef, (snapshot) => {
+      const data = snapshot.val();
+      const latestAqiValue = data ? Object.values(data).pop() : null;
+
+      if (latestAqiValue && !shownAqiToast) {
+        const aqi = Number(latestAqiValue);
+        if (!isNaN(aqi)) {
+          if (aqi <= 50) {
+            toast.success('AQI is low!');
+          } else if (aqi <= 250) {
+            toast.info('AQI is normal!');
+          } else {
+            toast.error('AQI is high');
+          }
+          setShownAqiToast(true);
+        }
+      }
+    });
+
+    return () => unsubscribe();
+  }, [shownAqiToast]);
+
+
 
   useEffect(() => {
     const fetchAqiData = async () => {
@@ -105,6 +134,7 @@ const Home = () => {
   return (
     <div>
       <Navbar />
+      <ToastContainer autoClose={2000} />
       <p className="fresh-breeze-text">Fresh Breeze</p>
 
       <div className="weather-container">
@@ -117,12 +147,9 @@ const Home = () => {
           </div>
           <div className="weather-item">
             <img src={HumidityImage} alt="Humidity" className="weather-icon" />
-            <div className="weather-text-container">
-              <p className="weather-text">
-                {weatherData.humidity !== null ? `${weatherData.humidity}%` : 'Loading...'}
-              </p>
-              <p className="humidity-label">Humidity</p>
-            </div>
+            <p className="weather-text">
+              {weatherData.humidity !== null ? `${weatherData.humidity}%` : 'Loading...'}
+            </p>
           </div>
         </div>
       </div>
@@ -162,7 +189,12 @@ const Home = () => {
         <div className="image-section">
           <video
             className="new-image"
-            src={PollutionVideo} autoPlay loop muted playsInline/>
+            src={PollutionVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
         </div>
         <div className="text-section">
           <h2>Real-Time Air Quality Monitoring</h2>
@@ -221,3 +253,5 @@ const Home = () => {
 };
 
 export default Home;
+
+
